@@ -7,9 +7,19 @@ const LandingPage = () => {
     return (
         <StyledLandingPage>
             <WelcomePage />
+            <section className="test"></section>
         </StyledLandingPage>
     );
 };
 
-const StyledLandingPage = styled.div``;
+const StyledLandingPage = styled.div`
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    section {
+        scroll-snap-align: center;
+    }
+`;
 export default LandingPage;

@@ -8,9 +8,11 @@ const GlobalStyle = createGlobalStyle`
 
     }
     body{
+        
         background-color: #5D5B6A;
         color:white;
-font-family: 'Roboto Mono', monospace;
+        font-family: 'Roboto Mono', monospace;
+        overflow: hidden;
     }
 
 `;
