@@ -1,21 +1,34 @@
 import React from "react";
 import Typed from "react-typed";
+import { motion } from "framer-motion";
 //components
 import styled from "styled-components";
-import Navigation from './Navigation'
+import Navigation from "./Navigation";
 
-import pixelAnim from '../animation'
+import pixelAnim from "../animation";
 const WelcomePage = () => {
     return (
         <StyledWelcomePage>
-            <Navigation/>
-            <img className="avatar pixel" src="assets/pixel-reg.png" alt="" />
+            <Navigation />
+            <motion.img
+                initial={{ x: "-100vw",
+                    scaleX: -1 }}
+                animate={{ x: 0 
+                }}
+                transition={{
+                    delay:0.4
+                }}
+                className="avatar pixel"
+                src="assets/pixel-reg.png"
+                alt=""
+            />
 
             <h1 className="hello">Hi, my name is Kuba</h1>
+            
             <p>
                 Welcome to my portfolio website.
                 <br />
-                You can acces each section of this website
+                You can access each section of this website
                 <br /> via buttons above or arrow below
             </p>
         </StyledWelcomePage>
@@ -51,7 +64,6 @@ const StyledWelcomePage = styled.section`
         text-align: center;
         width: 70%;
     }
-   
 `;
 
 export default WelcomePage;

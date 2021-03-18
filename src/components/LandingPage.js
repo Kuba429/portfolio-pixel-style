@@ -3,11 +3,13 @@ import styled from "styled-components";
 
 //components
 import WelcomePage from "./WelcomePage";
+import SkillsSection from './SkillsSection.js'
+
 const LandingPage = () => {
     return (
         <StyledLandingPage>
             <WelcomePage />
-            <section className="test"></section>
+            <SkillsSection />
         </StyledLandingPage>
     );
 };
@@ -19,6 +21,7 @@ const StyledLandingPage = styled.div`
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     section {
+        height: 100vh;
         scroll-snap-align: center;
     }
 `;

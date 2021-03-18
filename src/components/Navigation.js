@@ -4,7 +4,7 @@ import pixelAnim from "../animation";
 const Navigation = () => {
     return (
         <StyledNavigation className="navigation">
-            <a className="navItem" href="">
+            <a className="navItem" href="#SkillsSection">
                 Skills
             </a>
             <a className="navItem" href="">
