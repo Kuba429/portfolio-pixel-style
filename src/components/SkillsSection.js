@@ -1,23 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import ArrowContainer from "./ArrowContainer";
 
 //import components
 import SkillsContainer from "./SkillsContainer";
+import SkillBigCard from "./SkillBigCard";
+import ArrowContainer from "./ArrowContainer";
 
 const SkillsSection = () => {
+    const [bigCardActive, setBigCardActive] = useState(false);
+
+    const [activeSkill, setActiveSkill] = useState(false);
     return (
         <StyledSkillsSection id="SkillsSection">
             <h1>My Skills</h1>
-            <SkillsContainer />
-            <ArrowContainer sectionUp='WelcomeSection' fromBottom='5'/>
+            <SkillsContainer
+                activeSkill={activeSkill}
+                setActiveSkill={setActiveSkill}
+            />
+            <ArrowContainer sectionUp="WelcomeSection" fromBottom="5" />
+            <SkillBigCard
+               
+                activeSkill={activeSkill}
+                setActiveSkill={setActiveSkill}
+            />
         </StyledSkillsSection>
     );
 };
 const StyledSkillsSection = styled.section`
-    /* overflow: hidden; */
-    position:relative;
-    height:100vh;
+    position: relative;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

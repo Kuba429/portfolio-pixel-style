@@ -1,25 +1,27 @@
 import React from "react";
 import styled from "styled-components";
-
+import { uuid } from "uuidv4";
 //import components
 import SkillCard from "./SkillCard";
 
-const SkillsContainer = () => {
+import skillData from "../skillsData";
+
+const SkillsContainer = ({ activeSkill, setActiveSkill }) => {
+
     return (
-        <StyledSkillsContainer>
-            <SkillCard tech="html" />
-            <SkillCard tech="css" />
-            <SkillCard tech="js" />
-            <SkillCard tech="scss" />
-            <SkillCard tech="react" />
-            <SkillCard tech="node" />
-            <SkillCard tech="netlify" />
-            <SkillCard tech="mongodb" />
-            <SkillCard tech="linux" />
-            <SkillCard tech="git" />
-            <SkillCard tech="chrome" />
-            <SkillCard tech="figma" />
-            
+        <StyledSkillsContainer >
+            {skillData.map((item) => {
+                console.log(item.name);
+
+                return (
+                    <SkillCard
+                        setActiveSkill={setActiveSkill}
+                        tech={item.name}
+                        description={item.description}
+                        key={uuid()}
+                    />
+                );
+            })}
         </StyledSkillsContainer>
     );
 };
