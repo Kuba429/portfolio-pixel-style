@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const SkillCard = ({ tech }) => {
     return (
-        <StyledSkillCard >
+        <StyledSkillCard>
             <div className={`card ${tech}`}>
                 <figure className="front face">
                     <img src={`assets/pixel/${tech}.png`} alt="" />
@@ -19,7 +19,6 @@ const StyledSkillCard = styled.div`
     width: 16vw;
     height: 16vw;
 
-    
     &:hover {
         .card {
             transform: rotateY(180deg);
@@ -50,7 +49,6 @@ const StyledSkillCard = styled.div`
                 object-fit: scale-down;
                 width: 80%;
             }
-            
         }
         .back {
             width: 99%;
@@ -59,9 +57,9 @@ const StyledSkillCard = styled.div`
             transform: rotateY(180deg);
         }
     }
-    .figma{
-        .front{
-            img{
+    .figma {
+        .front {
+            img {
                 object-fit: scale-down;
                 height: 80%;
             }

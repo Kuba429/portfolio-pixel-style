@@ -4,19 +4,19 @@ import { motion } from "framer-motion";
 //components
 import styled from "styled-components";
 import Navigation from "./Navigation";
+import ArrowContainer from "./ArrowContainer";
 
 import pixelAnim from "../animation";
+
 const WelcomePage = () => {
     return (
-        <StyledWelcomePage>
+        <StyledWelcomePage id='WelcomeSection'>
             <Navigation />
             <motion.img
-                initial={{ x: "-100vw",
-                    scaleX: -1 }}
-                animate={{ x: 0 
-                }}
+                initial={{ x: "-100vw", scaleX: -1 }}
+                animate={{ x: 0 }}
                 transition={{
-                    delay:0.4
+                    delay: 0.4,
                 }}
                 className="avatar pixel"
                 src="assets/pixel-reg.png"
@@ -24,13 +24,14 @@ const WelcomePage = () => {
             />
 
             <h1 className="hello">Hi, my name is Kuba</h1>
-            
+
             <p>
                 Welcome to my portfolio website.
                 <br />
                 You can access each section of this website
                 <br /> via buttons above or arrow below
             </p>
+            <ArrowContainer sectionDown='SkillsSection'/>
         </StyledWelcomePage>
     );
 };
@@ -64,6 +65,7 @@ const StyledWelcomePage = styled.section`
         text-align: center;
         width: 70%;
     }
+    
 `;
 
 export default WelcomePage;
