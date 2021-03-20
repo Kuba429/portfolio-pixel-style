@@ -1,13 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-const SkillCard = ({ tech, description ,setActiveSkill}) => {
-    const clickHandle = ()=>{
-        setActiveSkill(tech)
-    }
+const SkillCard = ({ tech, description, setActiveSkill }) => {
+    const clickHandle = () => {
+        setActiveSkill(tech);
+    };
     return (
         <StyledSkillCard>
-            <div className={`card ${tech}`} >
+            <div className={`card ${tech}`}>
                 <figure className="front face">
                     <img src={`assets/pixel/${tech}.png`} alt="" />
                 </figure>
@@ -21,7 +22,7 @@ const SkillCard = ({ tech, description ,setActiveSkill}) => {
 const StyledSkillCard = styled.div`
     width: 16vw;
     height: 16vw;
-
+    user-select: none;
     &:hover {
         .card {
             transform: rotateY(180deg);
@@ -36,7 +37,7 @@ const StyledSkillCard = styled.div`
         height: 100%;
         transition: ease all 1s;
         transform-style: preserve-3d;
-        cursor:pointer;
+        cursor: pointer;
         .face {
             display: flex;
             justify-content: center;
@@ -59,7 +60,6 @@ const StyledSkillCard = styled.div`
             background-color: white;
             color: black;
             transform: rotateY(180deg);
-            
         }
     }
     .figma {

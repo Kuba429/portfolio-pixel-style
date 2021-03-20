@@ -31,7 +31,7 @@ const WelcomePage = () => {
                 You can access each section of this website
                 <br /> via buttons above or arrow below
             </p>
-            <ArrowContainer sectionDown='SkillsSection'/>
+            <ArrowContainer sectionDown='SkillsSection' sectionUp={false}/>
         </StyledWelcomePage>
     );
 };

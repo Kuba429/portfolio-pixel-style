@@ -20,10 +20,22 @@ export const bigCardVariants = {
     animate: {
         x: "-50%",
         y: "-50%",
-        transition:{
+        transition: {
             delay: 0.4,
-            duration: 0.4
-        }
+            duration: 0.4,
+        },
+    },
+};
+
+export const arrowVariants = {
+    initialDown: { rotateX: 180 },
+    initial: {},
+    animateDown: {
+        rotateX: 180,
+    },
+    animate: {},
+    whileTap: {
+        scale: 0.4,
     },
 };
 

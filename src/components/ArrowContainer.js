@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
+import { arrowVariants } from "../animation";
 const ArrowContainer = ({ sectionUp, sectionDown, fromBottom }) => {
     return (
         <StyledArrowContainer
@@ -9,12 +11,26 @@ const ArrowContainer = ({ sectionUp, sectionDown, fromBottom }) => {
         >
             {sectionUp != false && (
                 <a href={`#${sectionUp}`}>
-                    <img src="assets/arrow.png" alt="" className="arrow up" />
+                    <motion.img
+                        variants={arrowVariants}
+                        whileTap="whileTap"
+                        initial="initial"
+                        src="assets/arrow.png"
+                        alt=""
+                        className="arrow up"
+                    />
                 </a>
             )}
             {sectionDown != false && (
                 <a href={`#${sectionDown}`}>
-                    <img src="assets/arrow.png" alt="" className="arrow down" />
+                    <motion.img
+                        variants={arrowVariants}
+                        whileTap="whileTap"
+                        initial="initialDown"
+                        src="assets/arrow.png"
+                        alt=""
+                        className="arrow down"
+                    />
                 </a>
             )}
         </StyledArrowContainer>
@@ -26,14 +42,14 @@ const StyledArrowContainer = styled.div`
     bottom: ${(props) =>
         !isNaN(props.fromBottom) ? `${props.fromBottom}%` : `10%`};
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     position: absolute;
-    width: 100%;
+    width: 60%;
     /* bottom: 10%; */
     .arrow {
         width: 70px;
-        margin: 0 10rem;
+        user-select: none;
         &.down {
             transform: rotateX(180deg);
         }

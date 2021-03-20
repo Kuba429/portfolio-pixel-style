@@ -38,6 +38,7 @@ const StyledSkillsSection = styled.section`
         text-align: center;
         font-size: 6rem;
         margin: 1rem;
+        user-select: none;
     }
 `;
 
