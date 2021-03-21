@@ -3,26 +3,15 @@ import styled from "styled-components";
 
 //import components
 import SkillsContainer from "./SkillsContainer";
-import SkillBigCard from "./SkillBigCard";
+// import SkillBigCard from "./SkillBigCard";
 import ArrowContainer from "./ArrowContainer";
 
 const SkillsSection = () => {
-    const [bigCardActive, setBigCardActive] = useState(false);
-
-    const [activeSkill, setActiveSkill] = useState(false);
     return (
         <StyledSkillsSection id="SkillsSection">
             <h1>My Skills</h1>
-            <SkillsContainer
-                activeSkill={activeSkill}
-                setActiveSkill={setActiveSkill}
-            />
+            <SkillsContainer />
             <ArrowContainer sectionUp="WelcomeSection" fromBottom="5" />
-            <SkillBigCard
-               
-                activeSkill={activeSkill}
-                setActiveSkill={setActiveSkill}
-            />
         </StyledSkillsSection>
     );
 };

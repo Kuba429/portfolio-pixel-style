@@ -1,19 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
 
-const SkillCard = ({ tech, description, setActiveSkill }) => {
-    const clickHandle = () => {
-        setActiveSkill(tech);
-    };
+
+const SkillCard = ({ tech, description }) => {
+    
+
     return (
         <StyledSkillCard>
             <div className={`card ${tech}`}>
                 <figure className="front face">
                     <img src={`assets/pixel/${tech}.png`} alt="" />
                 </figure>
-                <figure className="back face" onClick={clickHandle}>
-                    <p>{tech}</p>
+                <figure className="back face">
+                    <div className="textContainer">
+                        <h2>{tech}</h2>
+                        <p>{description}</p>
+                    </div>
                 </figure>
             </div>
         </StyledSkillCard>
@@ -26,6 +28,9 @@ const StyledSkillCard = styled.div`
     &:hover {
         .card {
             transform: rotateY(180deg);
+            .back {
+                /* overflow-y: scroll; */
+            }
         }
     }
     .card {
@@ -37,7 +42,6 @@ const StyledSkillCard = styled.div`
         height: 100%;
         transition: ease all 1s;
         transform-style: preserve-3d;
-        cursor: pointer;
         .face {
             display: flex;
             justify-content: center;
@@ -60,6 +64,25 @@ const StyledSkillCard = styled.div`
             background-color: white;
             color: black;
             transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* overflow: hidden; */
+            .textContainer {
+                width: 80%;
+                height: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                h2 {
+                    margin-bottom: 1rem;
+                }
+                p{
+                    text-align:center;
+                }
+            }
         }
     }
     .figma {

@@ -6,7 +6,7 @@ import SkillCard from "./SkillCard";
 
 import skillData from "../skillsData";
 
-const SkillsContainer = ({ activeSkill, setActiveSkill }) => {
+const SkillsContainer = () => {
 
     return (
         <StyledSkillsContainer >
@@ -15,7 +15,7 @@ const SkillsContainer = ({ activeSkill, setActiveSkill }) => {
 
                 return (
                     <SkillCard
-                        setActiveSkill={setActiveSkill}
+                        
                         tech={item.name}
                         description={item.description}
                         key={uuid()}

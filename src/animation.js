@@ -14,15 +14,16 @@ const pixelAnim = keyframes`
 
 export const bigCardVariants = {
     initial: {
-        x: "-200vw",
+        x: "-130vw",
         y: "-50%",
+        
     },
     animate: {
         x: "-50%",
         y: "-50%",
         transition: {
-            delay: 0.4,
-            duration: 0.4,
+            delay: 0.1,
+            duration: 0.9,
         },
     },
 };
