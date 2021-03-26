@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 //import components
 import SkillsContainer from "./SkillsContainer";
-// import SkillBigCard from "./SkillBigCard";
 import ArrowContainer from "./ArrowContainer";
 
 const SkillsSection = () => {
@@ -11,7 +10,7 @@ const SkillsSection = () => {
         <StyledSkillsSection id="SkillsSection">
             <h1>My Skills</h1>
             <SkillsContainer />
-            <ArrowContainer sectionUp="WelcomeSection" fromBottom="5" />
+            <ArrowContainer sectionUp="WelcomeSection" sectionDown="ContactSection" fromBottom="5" />
         </StyledSkillsSection>
     );
 };

@@ -1,4 +1,4 @@
-const skillData = [
+export const skillData = [
     {
         name: "html",
         description:
@@ -36,24 +36,48 @@ const skillData = [
     },
     {
         name: "mongodb",
-        description: "I know basics of working with databases. I can build simple backend interacting with database. Mongo is my DB of choice because i find it simple and intuitive to work with.",
+        description:
+            "I know basics of working with databases. I can build simple backend interacting with database. Mongo is my DB of choice because i find it simple and intuitive to work with.",
     },
     {
         name: "linux",
-        description: "I'm comfortable with using bash and command line tools in general. I use linux as my daily driver but I'm also familiar with Windows 10.",
+        description:
+            "I'm comfortable with using bash and command line tools in general. I use linux as my daily driver but I'm also familiar with Windows 10.",
     },
     {
         name: "git",
-        description: "I have basic knowledge of git allowing me to work in team. I can use branches.",
+        description:
+            "I have basic knowledge of git allowing me to work in team. I can use branches.",
     },
     {
         name: "devtools",
-        description: "I can use devtools to debug and improve my code. I decided to add devtools to this list because in my opinion they are a little underrated. Good knowlegde of devtools can save a lot of time!",
+        description:
+            "I can use devtools to debug and improve my code. I decided to add devtools to this list because in my opinion they are a little underrated. Good knowlegde of devtools can save a lot of time!",
     },
     {
         name: "figma",
-        description: "I use figma to design my projects. Designing projects makes it easier to code, because you know exactly what you're going for as you write code.",
+        description:
+            "I use figma to design my projects. Designing projects makes it easier to code, because you know exactly what you're going for as you write code.",
     },
 ];
 
-export default skillData;
+export const contactData = [
+    {
+        name: "github",
+    },
+    {
+        name: "gmail",
+    },
+    {
+        name: "twitter",
+    },
+    {
+        name: "fiverr",
+    },
+    {
+        name: "codepen",
+    },
+    {
+        name: "linkedin",
+    },
+];

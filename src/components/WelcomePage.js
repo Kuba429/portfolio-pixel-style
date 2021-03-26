@@ -10,7 +10,7 @@ import pixelAnim from "../animation";
 
 const WelcomePage = () => {
     return (
-        <StyledWelcomePage id='WelcomeSection'>
+        <StyledWelcomePage id="WelcomeSection">
             <Navigation />
             <motion.img
                 initial={{ x: "-100vw", scaleX: -1 }}
@@ -31,14 +31,14 @@ const WelcomePage = () => {
                 You can access each section of this website
                 <br /> via buttons above or arrow below
             </p>
-            <ArrowContainer sectionDown='SkillsSection' sectionUp={false}/>
+            <ArrowContainer sectionDown="SkillsSection" sectionUp={false} />
         </StyledWelcomePage>
     );
 };
 const StyledWelcomePage = styled.section`
     width: 100vw;
     height: 100vh;
-
+    user-select: none;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -65,7 +65,6 @@ const StyledWelcomePage = styled.section`
         text-align: center;
         width: 70%;
     }
-    
 `;
 
 export default WelcomePage;

@@ -4,18 +4,14 @@ import { uuid } from "uuidv4";
 //import components
 import SkillCard from "./SkillCard";
 
-import skillData from "../skillsData";
+import {skillData} from "../Data";
 
 const SkillsContainer = () => {
-
     return (
-        <StyledSkillsContainer >
+        <StyledSkillsContainer>
             {skillData.map((item) => {
-                console.log(item.name);
-
                 return (
                     <SkillCard
-                        
                         tech={item.name}
                         description={item.description}
                         key={uuid()}

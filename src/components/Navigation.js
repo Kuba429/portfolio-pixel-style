@@ -13,7 +13,7 @@ const Navigation = () => {
             <a className="navItem" href="">
                 About
             </a>
-            <a className="navItem" href="">
+            <a className="navItem" href="#ContactSection">
                 Contact
             </a>
         </StyledNavigation>
