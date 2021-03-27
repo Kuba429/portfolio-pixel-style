@@ -13,6 +13,7 @@
     "react-typed": "^1.2.0",
     "styled-components": "^5.2.1",
     "typed.js": "^2.0.11",
+    "uuid": "^8.3.2",
     "uuidv4": "^6.2.6",
     "web-vitals": "^1.0.1"
   },

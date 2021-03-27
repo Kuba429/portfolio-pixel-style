@@ -12,11 +12,22 @@ const pixelAnim = keyframes`
 
 `;
 
+export const contactBlockVariants = {
+    initial: {
+        y: '100%',
+    },
+    hover: {
+        y: 0,
+        transition:{
+            type: 'ease',
+        }
+    },
+};
+
 export const bigCardVariants = {
     initial: {
         x: "-130vw",
         y: "-50%",
-        
     },
     animate: {
         x: "-50%",

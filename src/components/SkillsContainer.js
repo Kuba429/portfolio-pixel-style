@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { uuid } from "uuidv4";
+import { v4 } from "uuid";
 //import components
 import SkillCard from "./SkillCard";
 
@@ -14,7 +14,7 @@ const SkillsContainer = () => {
                     <SkillCard
                         tech={item.name}
                         description={item.description}
-                        key={uuid()}
+                        key={v4()}
                     />
                 );
             })}

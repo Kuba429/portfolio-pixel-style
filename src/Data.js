@@ -64,20 +64,38 @@ export const skillData = [
 export const contactData = [
     {
         name: "github",
+        text: "My profile",
+        link: "#",
+        additional: ""
     },
     {
         name: "gmail",
+        text: "Mail me",
+        link: "#",
+        additional: "jakubzawadzki429@gmail.com"
     },
     {
         name: "twitter",
+        text: "My profile",
+        link: "#",
+        additional: ""
     },
     {
         name: "fiverr",
+        text: "My profile",
+        link: "#",
+        additional: ""
     },
     {
         name: "codepen",
+        text: "My profile",
+        link: "#",
+        additional: ""
     },
     {
         name: "linkedin",
+        text: "My profile",
+        link: "#",
+        additional: ""
     },
 ];
