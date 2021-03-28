@@ -13,6 +13,7 @@ const WelcomePage = () => {
         <StyledWelcomePage id="WelcomeSection">
             <Navigation />
             <motion.img
+            
                 initial={{ x: "-100vw", scaleX: -1 }}
                 animate={{ x: 0 }}
                 transition={{

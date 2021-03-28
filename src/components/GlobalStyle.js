@@ -12,6 +12,9 @@ const GlobalStyle = createGlobalStyle`
         background-color: #5D5B6A;
         color:white;
         font-family: 'Roboto Mono', monospace;
+      
+        
+
         overflow: hidden;
     }
 

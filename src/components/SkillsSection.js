@@ -10,7 +10,7 @@ const SkillsSection = () => {
         <StyledSkillsSection id="SkillsSection">
             <h1>My Skills</h1>
             <SkillsContainer />
-            <ArrowContainer sectionUp="WelcomeSection" sectionDown="ContactSection" fromBottom="5" />
+            <ArrowContainer sectionUp="WelcomeSection" sectionDown="AboutSection" fromBottom="5" />
         </StyledSkillsSection>
     );
 };

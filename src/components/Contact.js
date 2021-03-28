@@ -18,7 +18,7 @@ const Contact = ({ name, text, link, additional }) => {
                 <motion.div variants={contactBlockVariants} className="cover">
                     <h4 className="name">{name}</h4>
                     {additional && <h5>{additional}</h5>}
-                    <a href={link}>
+                    <a href={link} target='_blank'>
                         <h3>{text}</h3>
                     </a>
                 </motion.div>

@@ -5,13 +5,17 @@ import styled from "styled-components";
 import WelcomePage from "./WelcomePage";
 import SkillsSection from './SkillsSection.js'
 import ContactSection from "./ContactSection";
+import AboutSection from './AboutSection'
+
 
 const LandingPage = () => {
     return (
         <StyledLandingPage>
             <WelcomePage />
             <SkillsSection />
+            <AboutSection/>
             <ContactSection/>
+
         </StyledLandingPage>
     );
 };

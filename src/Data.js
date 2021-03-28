@@ -65,19 +65,19 @@ export const contactData = [
     {
         name: "github",
         text: "My profile",
-        link: "#",
+        link: "https://github.com/Kuba429",
         additional: ""
     },
     {
         name: "gmail",
         text: "Mail me",
-        link: "#",
+        link: "mailto:jakubzawadzki429@gmail.com",
         additional: "jakubzawadzki429@gmail.com"
     },
     {
         name: "twitter",
         text: "My profile",
-        link: "#",
+        link: "https://twitter.com/kubadwa",
         additional: ""
     },
     {
@@ -89,13 +89,13 @@ export const contactData = [
     {
         name: "codepen",
         text: "My profile",
-        link: "#",
+        link: "https://codepen.io/frontendkuba",
         additional: ""
     },
     {
         name: "linkedin",
         text: "My profile",
-        link: "#",
+        link: "https://www.linkedin.com/in/jakub-zawadzki-67824a206/",
         additional: ""
     },
 ];

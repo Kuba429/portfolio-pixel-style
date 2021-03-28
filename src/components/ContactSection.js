@@ -3,15 +3,15 @@ import styled from "styled-components";
 import ArrowContainer from "./ArrowContainer";
 
 //components
-import ContactContainer from './ContactContainer'
-
+import ContactContainer from "./ContactContainer";
 
 const ContactSection = () => {
     return (
         <StyledContactSection id="ContactSection">
             <h1>Find me here!</h1>
-            <ContactContainer/>
-            <ArrowContainer sectionUp="SkillsSection" />
+            <ContactContainer />
+            <img className="avatar" src="assets/pixel-thumb.png" alt="" />
+            <ArrowContainer sectionUp="AboutSection" />
         </StyledContactSection>
     );
 };
@@ -24,6 +24,14 @@ const StyledContactSection = styled.section`
     align-items: center;
     h1 {
         font-size: 4rem;
+        margin-bottom: 5rem;
+    }
+    .avatar {
+        position: absolute;
+        transform: rotateY(180deg) rotateZ(-45deg);
+        top: 10%;
+        left: -10px;
+        height: 360px;
     }
 `;
 
