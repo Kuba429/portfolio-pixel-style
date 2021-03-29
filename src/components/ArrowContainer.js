@@ -54,6 +54,22 @@ const StyledArrowContainer = styled.div`
             transform: rotateX(180deg);
         }
     }
+
+    @media (max-width: 800px) {
+        bottom: 5%;
+    }
+    @media (max-width: 370px), (max-height: 700px) {
+        bottom: 1%;
+        .arrow {
+            width: 50px;
+        }
+    }
+
+    @media (max-height: 650px) {
+        .arrow {
+            width: 35px;
+        }
+    }
 `;
 
 export default ArrowContainer;

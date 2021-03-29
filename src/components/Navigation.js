@@ -7,14 +7,15 @@ const Navigation = () => {
             <a className="navItem" href="#SkillsSection">
                 Skills
             </a>
-            <a className="navItem" href="">
-                Projects
-            </a>
-            <a className="navItem" href="">
+
+            <a className="navItem" href="#AboutSection">
                 About
             </a>
             <a className="navItem" href="#ContactSection">
                 Contact
+            </a>
+            <a className="navItem" href="">
+                Projects
             </a>
         </StyledNavigation>
     );
@@ -48,6 +49,23 @@ const StyledNavigation = styled.div`
             transition-delay: 0.5s;
             background-size: 180px;
             animation: ${pixelAnim} 0.5s steps(8) forwards;
+        }
+    }
+
+
+    @media (max-width: 900px){
+        .navItem{
+            font-size:1rem;
+            width: 20%;
+            height: 50px;
+            padding: 0.4rem;
+        }
+    }
+
+    @media (max-width: 450px){
+        .navItem{
+            font-size: 0.7rem;
+            
         }
     }
 `;
