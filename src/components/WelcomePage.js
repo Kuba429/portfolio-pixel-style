@@ -37,7 +37,8 @@ const WelcomePage = () => {
                 Welcome to my portfolio website.
                 <br />
                 You can access each section of this website
-                <br /> via buttons above or arrow below
+                <br /> via buttons above{" "}
+                <span className="desktopOnly"> or arrow below</span>
             </p>
             <ArrowContainer sectionDown="SkillsSection" sectionUp={false} />
         </StyledWelcomePage>
@@ -154,7 +155,7 @@ const StyledWelcomePage = styled.section`
             h1 {
                 font-size: 2rem;
             }
-            p{
+            p {
                 font-size: 0.6rem;
             }
             .typed {
@@ -163,6 +164,12 @@ const StyledWelcomePage = styled.section`
         }
         .avatar {
             height: 120px;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .desktopOnly {
+            display: none;
         }
     }
 `;

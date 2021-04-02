@@ -4,7 +4,7 @@ import { v4 } from "uuid";
 //import components
 import SkillCard from "./SkillCard";
 
-import {skillData} from "../Data";
+import { skillData } from "../Data";
 
 const SkillsContainer = () => {
     return (

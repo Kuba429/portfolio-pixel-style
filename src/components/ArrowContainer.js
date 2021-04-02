@@ -55,8 +55,18 @@ const StyledArrowContainer = styled.div`
         }
     }
 
+    @media (max-width: 1300px) {
+        .arrow {
+            width: 50px;
+        }
+    }
+
     @media (max-width: 800px) {
+        display: none;
         bottom: 5%;
+        .arrow {
+            width: 40px;
+        }
     }
     @media (max-width: 370px), (max-height: 700px) {
         bottom: 1%;
@@ -68,6 +78,11 @@ const StyledArrowContainer = styled.div`
     @media (max-height: 650px) {
         .arrow {
             width: 35px;
+        }
+    }
+    @media (max-height: 400px) {
+        .arrow {
+            width: 20px;
         }
     }
 `;

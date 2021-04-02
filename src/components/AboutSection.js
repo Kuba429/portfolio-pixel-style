@@ -9,20 +9,20 @@ const AboutSection = () => {
     return (
         <StyledAboutSection id="AboutSection">
             <h1>About me</h1>
-            
+
             <img
                 src="assets/pixel-computer.png"
                 className="avatar computer"
                 alt=""
             />
-            <img className='avatar regular' src="assets/pixel-reg.png" alt=""/>
-        <img className='avatar thumb' src="assets/pixel-thumb.png"  alt=""/>
-
+            <img className="avatar regular" src="assets/pixel-reg.png" alt="" />
+            <img className="avatar thumb" src="assets/pixel-thumb.png" alt="" />
 
             <div className="wrapper">
                 <motion.img
                     initial={{ rotateY: 180 }}
                     whileHover={{ rotateZ: 360 }}
+                    whileTap={{rotateZ: 360}}
                     className="head"
                     src="assets/pixel-head.png"
                     alt=""
@@ -64,21 +64,22 @@ const StyledAboutSection = styled.section`
         margin: 3rem;
     }
     .avatar {
+        user-drag: none;
+        user-select: none;
         position: absolute;
         height: 200px;
-        
+        z-index: -1;
     }
-    .computer{
+    .computer {
         bottom: 20%;
         right: 5%;
     }
-    .regular{
+    .regular {
         left: 0px;
         height: 400px;
         transform: rotateY(180deg) rotateZ(-30deg);
-
     }
-    .thumb{
+    .thumb {
         right: 0px;
         top: 10%;
         transform: rotateZ(-45deg);
@@ -91,6 +92,7 @@ const StyledAboutSection = styled.section`
             height: 140px;
             margin: 1rem;
             user-drag: none;
+            user-select: none;
         }
         p {
             font-size: 2rem;
@@ -99,6 +101,97 @@ const StyledAboutSection = styled.section`
         }
         .second {
             text-align: center;
+        }
+    }
+
+    @media (max-width: 1500px), (max-height: 900px) {
+        justify-content: flex-start;
+        h1 {
+            margin: 1rem;
+            margin-top: 2rem;
+        }
+    }
+    @media (max-width: 1000px), (max-height: 900px) {
+        h1 {
+            font-size: 4rem;
+        }
+        .wrapper {
+            p {
+                font-size: 1.7rem;
+            }
+        }
+    }
+
+    @media (max-width: 850px), (max-height: 730px) {
+        h1 {
+            font-size: 3.2rem;
+        }
+        .wrapper {
+            p {
+                font-size: 1.3rem;
+            }
+        }
+    }
+    @media (max-width: 870px), (max-height: 650px) {
+        h1 {
+            font-size: 3.1rem;
+        }
+        .wrapper {
+            width: 80%;
+            p {
+                font-size: 1.7rem;
+            }
+            .head {
+                height: 100px;
+            }
+        }
+        .avatar {
+            height: 140px;
+        }
+    }
+    @media (max-width: 750px), (max-height: 780px) {
+        h1 {
+            font-size: 2.8rem;
+        }
+        .wrapper {
+            p {
+                font-size: 1.4rem;
+            }
+        }
+    }
+    @media (max-width: 570px), (max-height: 700px) {
+        h1 {
+            font-size: 2.4rem;
+        }
+        .wrapper {
+            p {
+                font-size: 1.2rem;
+            }
+        }
+        .avatar {
+            height: 110px;
+        }
+    }
+    @media (max-width: 450px), (max-height: 700px) {
+        h1 {
+            font-size: 2rem;
+        }
+        .wrapper {
+            p {
+                font-size: 1rem;
+            }
+        }
+        .avatar {
+            height: 110px;
+        }
+    }
+
+    @media (max-width: 380px), (max-height: 620px) {
+        .wrapper {
+            width: 85%;
+            p {
+                font-size: 0.9rem;
+            }
         }
     }
 `;

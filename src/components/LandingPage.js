@@ -3,10 +3,9 @@ import styled from "styled-components";
 
 //components
 import WelcomePage from "./WelcomePage";
-import SkillsSection from './SkillsSection.js'
+import SkillsSection from "./SkillsSection.js";
 import ContactSection from "./ContactSection";
-import AboutSection from './AboutSection'
-
+import AboutSection from "./AboutSection";
 
 const LandingPage = () => {
     return (
@@ -14,8 +13,7 @@ const LandingPage = () => {
             <WelcomePage />
             <SkillsSection />
             <AboutSection/>
-            <ContactSection/>
-
+            {/* <ContactSection/> */}
         </StyledLandingPage>
     );
 };

@@ -68,6 +68,13 @@ const StyledNavigation = styled.div`
             
         }
     }
+    @media (max-width: 350px){
+        .navItem{
+            font-size: 0.6rem;
+            padding: 1rem;
+            height: fit-content;
+        }
+    }
 `;
 
 export default Navigation;

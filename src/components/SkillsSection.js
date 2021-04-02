@@ -10,13 +10,17 @@ const SkillsSection = () => {
         <StyledSkillsSection id="SkillsSection">
             <h1>My Skills</h1>
             <SkillsContainer />
-            <ArrowContainer sectionUp="WelcomeSection" sectionDown="AboutSection" fromBottom="5" />
+            <ArrowContainer
+                sectionUp="WelcomeSection"
+                sectionDown="AboutSection"
+                fromBottom="5"
+            />
         </StyledSkillsSection>
     );
 };
 const StyledSkillsSection = styled.section`
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -27,6 +31,19 @@ const StyledSkillsSection = styled.section`
         font-size: 6rem;
         margin: 1rem;
         user-select: none;
+    }
+
+    @media (max-height: 750px), (max-width: 700px) {
+        h1 {
+            font-size: 4rem;
+            margin: 0.7rem;
+        }
+    }
+
+    @media (max-width: 400px) {
+        h1 {
+            font-size: 3rem;
+        }
     }
 `;
 
