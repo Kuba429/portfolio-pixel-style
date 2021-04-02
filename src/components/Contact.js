@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 //components
@@ -6,19 +6,25 @@ import { motion } from "framer-motion";
 import { contactBlockVariants } from "../animation";
 
 const Contact = ({ name, text, link, additional }) => {
+    const [isHovered, setIsHovered] = useState(false);
+
     return (
-        <StyledContact>
+        <StyledContact
+            onHoverStart={()     => setIsHovered(true)}
+            onHoverEnd  ={()     => setIsHovered(false)}
+            onTapStart  ={()     => setIsHovered(true)}
+            onTapCancel ={()     => setIsHovered(false)}
+        >
             <motion.div
                 initial="initial"
-                animate="initial"
-                whileHover="hover"
+                animate={isHovered ? "hover" : "initial"}
                 className={`container ${name}`}
             >
                 <img src={`assets/pixel/${name}.png`} alt={`${name} logo`} />
-                <motion.div variants={contactBlockVariants} className="cover">
+                <motion.div variants={contactBlockVariants} className="cover" onClick={()=>{setIsHovered(false)}}>
                     <h4 className="name">{name}</h4>
-                    {additional && <h5>{additional}</h5>}
-                    <a href={link} target='_blank'>
+                    {additional && <h5 className='additional'>{additional}</h5>}
+                    <a href={link} target="_blank">
                         <h3>{text}</h3>
                     </a>
                 </motion.div>
@@ -27,7 +33,7 @@ const Contact = ({ name, text, link, additional }) => {
     );
 };
 
-const StyledContact = styled.div`
+const StyledContact = styled(motion.div)`
     width: 16vw;
     height: 16vw;
 
@@ -36,6 +42,7 @@ const StyledContact = styled.div`
     align-items: center;
     user-drag: none;
     overflow: hidden;
+
     .container {
         position: relative;
         width: 100%;
@@ -91,6 +98,149 @@ const StyledContact = styled.div`
     }
     .github {
         background-color: #0d2534;
+    }
+
+    @media (max-width: 800px) {
+        width: 33.33333vw;
+        height: 33vw;
+        .container{
+            .cover{
+                .additional{
+                    font-size:0.8rem !important;
+                }
+                .name{
+                    font-size:1.6rem;
+                }
+            }
+        }
+    }
+    @media (max-width: 1450px){
+        .container{
+            .cover{
+                a{
+                    h3{
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 1250px){
+        .container{
+            .cover{
+                a{
+                    h3{
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1150px){
+        .container{
+            .cover{
+                .additional{
+                    font-size:0.6rem;
+                }
+                .name{
+                    font-size:1.6rem;
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 1000px){
+        .container{
+            .cover{
+                .additional{
+                    font-size: 0.4rem;
+                }
+                a{
+                    padding: 8px;
+                    h3{
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+    
+
+
+
+
+
+
+
+    @media (max-width: 620px) {
+        
+        .container{
+            .cover{
+                .additional{
+                    font-size:0.4rem !important;
+                }
+                .name{
+                    font-size:1.1rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 450px) {
+        
+        .container{
+            .cover{
+                a{
+                    padding: 5px;
+                }
+                .additional{
+                    font-size:0.4rem !important;
+                }
+                .name{
+                    font-size:0.9rem;
+                }
+            }
+        }
+    }
+    @media (max-width: 350px) {
+        
+        .container{
+            .cover{
+                a{
+                    padding: 1px;
+                    h3{
+                        font-size: 0.9rem;
+                    }
+                }
+                .additional{
+                    font-size:0.4rem !important;
+                }
+                .name{
+                    font-size:0.9rem;
+                }
+            }
+        }
+    }
+    @media (max-width: 270px) {
+        
+        .container{
+            .cover{
+                a{
+                    padding: 1px;
+                    h3{
+                        font-size: 0.6rem;
+                    }
+                }
+                .additional{
+                    font-size:0.2rem !important;
+                }
+                .name{
+                    font-size:0.7rem;
+                }
+            }
+        }
     }
 `;
 

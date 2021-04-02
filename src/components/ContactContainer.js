@@ -26,6 +26,7 @@ const ContactContainer = () => {
 const StyledContactContainer = styled.div`
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;

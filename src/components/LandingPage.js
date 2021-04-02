@@ -13,7 +13,7 @@ const LandingPage = () => {
             <WelcomePage />
             <SkillsSection />
             <AboutSection/>
-            {/* <ContactSection/> */}
+            <ContactSection/>
         </StyledLandingPage>
     );
 };
@@ -28,5 +28,9 @@ const StyledLandingPage = styled.div`
         height: 100vh;
         scroll-snap-align: center;
     }
+
+
+
+    
 `;
 export default LandingPage;

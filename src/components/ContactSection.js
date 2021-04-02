@@ -25,6 +25,7 @@ const StyledContactSection = styled.section`
     h1 {
         font-size: 4rem;
         margin-bottom: 5rem;
+        text-align: center;
     }
     .avatar {
         position: absolute;
@@ -32,6 +33,23 @@ const StyledContactSection = styled.section`
         top: 10%;
         left: -10px;
         height: 360px;
+        z-index: -1;
+    }
+
+    @media (max-width: 800px) {
+        .avatar {
+            height: 150px;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 3rem;
+        }
+    }
+    @media (max-height: 720px){
+        .avatar{
+            top: 2%;
+            
+        }
     }
 `;
 

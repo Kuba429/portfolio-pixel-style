@@ -14,7 +14,7 @@ const Navigation = () => {
             <a className="navItem" href="#ContactSection">
                 Contact
             </a>
-            <a className="navItem" href="">
+            <a className="navItem" onClick={()=>{alert('This feature is not yet available. If you really want to see my projects check out my github :)')}}>
                 Projects
             </a>
         </StyledNavigation>
