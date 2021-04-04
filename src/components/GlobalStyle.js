@@ -16,6 +16,16 @@ const GlobalStyle = createGlobalStyle`
         
 
         overflow: hidden;
+
+       
+    }
+    ::-webkit-scrollbar{
+        background-color: #5D5B6A;
+        width: 0.3vw;
+    }
+    
+    ::-webkit-scrollbar-thumb{
+        background-color: #e3e2e5;
     }
 
 `;
