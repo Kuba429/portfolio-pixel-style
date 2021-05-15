@@ -90,6 +90,10 @@ const StyledProjectSlide = styled.div`
                 }
             }
             .techUsed {
+                    display:flex;
+                        flex-direction: column;
+                        align-items:center;
+                        justify-content:center;
                 ul {
                     width: 100%;
                     li {
@@ -163,6 +167,7 @@ const StyledProjectSlide = styled.div`
             .about {
                 .techUsed {
                     ul {
+                        
                         li {
                             font-size: 1.5rem;
                         }

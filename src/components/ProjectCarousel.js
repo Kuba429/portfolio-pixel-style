@@ -40,6 +40,8 @@ const StyledProjectCarousel = styled.div`
     }
 
     @media (max-width: 800px) {
+        width: 98%;
+        height: 90%;
         .Glide-leftArrow,
         .Glide-rightArrow {
             display: none;
