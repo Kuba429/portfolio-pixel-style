@@ -4,17 +4,17 @@ import pixelAnim from "../animation";
 const Navigation = () => {
     return (
         <StyledNavigation className="navigation">
-            <a className="navItem" href="#SkillsSection">
+            <a className="navItem" href="#Skills">
                 Skills
             </a>
 
-            <a className="navItem" href="#AboutSection">
+            <a className="navItem" href="#About">
                 About
             </a>
-            <a className="navItem" href="#ContactSection">
+            <a className="navItem" href="#Contact">
                 Contact
             </a>
-            <a className="navItem" onClick={()=>{alert('This feature is not yet available. If you really want to see my projects check out my github :)')}}>
+            <a className="navItem" href='#Projects'>
                 Projects
             </a>
         </StyledNavigation>

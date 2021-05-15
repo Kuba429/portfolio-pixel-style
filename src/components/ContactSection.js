@@ -1,17 +1,20 @@
-import React from "react";
-import styled from "styled-components";
-import ArrowContainer from "./ArrowContainer";
+import React from 'react';
+import styled from 'styled-components';
+import ArrowContainer from './ArrowContainer';
 
 //components
-import ContactContainer from "./ContactContainer";
+import ContactContainer from './ContactContainer';
 
 const ContactSection = () => {
     return (
-        <StyledContactSection id="ContactSection">
+        <StyledContactSection id="Contact">
             <h1>Find me here!</h1>
             <ContactContainer />
             <img className="avatar" src="assets/pixel-thumb.png" alt="" />
-            <ArrowContainer sectionUp="AboutSection" />
+            <ArrowContainer
+                sectionUp="About"
+                sectionDown="Projects"
+            />
         </StyledContactSection>
     );
 };
@@ -45,10 +48,9 @@ const StyledContactSection = styled.section`
             margin-bottom: 3rem;
         }
     }
-    @media (max-height: 720px){
-        .avatar{
+    @media (max-height: 720px) {
+        .avatar {
             top: 2%;
-            
         }
     }
 `;

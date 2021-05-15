@@ -7,7 +7,7 @@ import ArrowContainer from "./ArrowContainer";
 
 const AboutSection = () => {
     return (
-        <StyledAboutSection id="AboutSection">
+        <StyledAboutSection id="About">
             <h1>About me</h1>
 
             <img
@@ -44,8 +44,8 @@ const AboutSection = () => {
                 </p>
             </div>
             <ArrowContainer
-                sectionUp="SkillsSection"
-                sectionDown="ContactSection"
+                sectionUp="Skills"
+                sectionDown="Contact"
                 fromBottom="5"
             />
         </StyledAboutSection>

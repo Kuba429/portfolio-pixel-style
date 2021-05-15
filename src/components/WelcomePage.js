@@ -10,7 +10,7 @@ import pixelAnim from "../animation";
 
 const WelcomePage = () => {
     return (
-        <StyledWelcomePage id="WelcomeSection">
+        <StyledWelcomePage id="Welcome">
             <Navigation />
             <motion.img
                 initial={{ x: "-100vw", scaleX: -1 }}
@@ -40,7 +40,7 @@ const WelcomePage = () => {
                 <br /> via buttons above{" "}
                 <span className="desktopOnly"> or arrow below</span>
             </p>
-            <ArrowContainer sectionDown="SkillsSection" sectionUp={false} />
+            <ArrowContainer sectionDown="Skills" sectionUp={false} />
         </StyledWelcomePage>
     );
 };

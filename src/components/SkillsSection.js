@@ -7,12 +7,12 @@ import ArrowContainer from "./ArrowContainer";
 
 const SkillsSection = () => {
     return (
-        <StyledSkillsSection id="SkillsSection">
+        <StyledSkillsSection id="Skills">
             <h1>My Skills</h1>
             <SkillsContainer />
             <ArrowContainer
-                sectionUp="WelcomeSection"
-                sectionDown="AboutSection"
+                sectionUp="Welcome"
+                sectionDown="About"
                 fromBottom="5"
             />
         </StyledSkillsSection>

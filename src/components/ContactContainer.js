@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import {v4} from 'uuid'
+import React from 'react';
+import styled from 'styled-components';
+import { v4 } from 'uuid';
 //components/assets
-import Contact from "./Contact";
-import { contactData } from "../Data";
+import Contact from './Contact';
+import { contactData } from '../Data';
 
 const ContactContainer = () => {
     return (

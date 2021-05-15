@@ -6,6 +6,8 @@ import WelcomePage from "./WelcomePage";
 import SkillsSection from "./SkillsSection.js";
 import ContactSection from "./ContactSection";
 import AboutSection from "./AboutSection";
+import ProjectsSection from './ProjectsSection'
+
 
 const LandingPage = () => {
     return (
@@ -14,6 +16,7 @@ const LandingPage = () => {
             <SkillsSection />
             <AboutSection/>
             <ContactSection/>
+            <ProjectsSection/>
         </StyledLandingPage>
     );
 };
