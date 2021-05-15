@@ -12,7 +12,7 @@ export const skillData = [
     {
         name: 'javascript',
         description:
-            'I can use javascript to make website interactive. Over years of experience i got very comfortable with syntax, asynchronous js, OOB, working with APIs and more.',
+            'I can use javascript to make website interactive. Over the months of experience i got very comfortable with syntax, asynchronous js, OOB, working with APIs and more.',
     },
     {
         name: 'scss',
@@ -27,7 +27,7 @@ export const skillData = [
     {
         name: 'node',
         description:
-            "I know basics of node allowing me to build simple REST API or Electron app. Although i wouldn't consider myself fullstack developer ;)",
+            "I know basics of node allowing me to build simple REST API. Although i wouldn't consider myself fullstack developer ;)",
     },
     {
         name: 'netlify',
@@ -42,7 +42,7 @@ export const skillData = [
     {
         name: 'linux',
         description:
-            "I'm comfortable with using bash and command line tools in general. I use linux as my daily driver but I'm also familiar with Windows 10.",
+            "I'm comfortable with using bash and command line tools in general. I used linux as my daily driver for over a year. Now i use Windows 10 with WSL2.",
     },
     {
         name: 'git',
@@ -81,12 +81,6 @@ export const contactData = [
         additional: '',
     },
     {
-        name: 'fiverr',
-        text: 'My profile',
-        link: '#',
-        additional: '',
-    },
-    {
         name: 'codepen',
         text: 'My profile',
         link: 'https://codepen.io/frontendkuba',
@@ -96,49 +90,59 @@ export const contactData = [
         name: 'linkedin',
         text: 'My profile',
         link: 'https://www.linkedin.com/in/jakub-zawadzki-67824a206/',
-        additional: '',
+        additional:
+            "I don't use linkedin very often. Please mail me instead if you don't mind :)",
     },
 ];
 
 export const projectData = [
     {
-
         name: 'organizer',
         title: 'Drag and Drop Organizer',
         techUsed: ['HTML', 'CSS', 'Javascript', 'git'],
         description:
             'Trello inspired app made with javascript built-in drag and drop API',
+        github: 'https://github.com/Kuba429/dnd-organizer',
+        link: 'https://dragndroporganizer.netlify.app/',
     },
     {
-
         name: 'todolist',
         title: 'ToDo List',
         techUsed: ['React', 'styled components'],
         description:
             'ToDo list made with react. Uses local storage to store items',
+        github: 'https://github.com/Kuba429/todolist',
+        link: 'https://materialtodo.netlify.app/',
     },
     {
-
         name: 'portfolio',
         title: 'Portfolio',
-        techUsed: ['React', 'styled components', 'Framer motion', 'Other small libraries'],
-        description:
-            'My pixel-style portfolio. Website you\'re currently on.',
+        techUsed: [
+            'React',
+            'styled components',
+            'Framer motion',
+            'Other small libraries',
+        ],
+        description: "My pixel-style portfolio. Website you're currently on.",
+        github: 'https://github.com/Kuba429/portfolio-pixel-style',
+        link: '#',
     },
     {
-
         name: 'rickandmorty',
         title: 'Rick and Morty Characters',
         techUsed: ['Vue', 'External API'],
         description:
             'Website with info about Rick and Morty characters. I made it to learn a little of vue',
-    },
-    {
-
-        name: 'passwordgenerator',
-        title: 'Password Generator',
-        techUsed: ['Javascript', 'HTML', 'CSS'],
-        description:
+            github: 'https://github.com/Kuba429/rick-and-morty-info',
+            link: 'https://rickandmortychar.netlify.app/'
+        },
+        {
+            name: 'passwordgenerator',
+            title: 'Password Generator',
+            techUsed: ['Javascript', 'HTML', 'CSS'],
+            description:
             'One of my first javascript projects. Client side random password generator.',
+            github: 'https://github.com/Kuba429/passwordgenerator',
+            link: 'https://passwrdgenerator.netlify.app/'
     },
 ];

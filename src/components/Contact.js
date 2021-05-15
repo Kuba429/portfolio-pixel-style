@@ -1,29 +1,35 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 //components
 
-import { contactBlockVariants } from "../animation";
+import { contactBlockVariants } from '../animation';
 
 const Contact = ({ name, text, link, additional }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
         <StyledContact
-            onHoverStart={()     => setIsHovered(true)}
-            onHoverEnd  ={()     => setIsHovered(false)}
-            onTapStart  ={()     => setIsHovered(true)}
-            onTapCancel ={()     => setIsHovered(false)}
+            onHoverStart={() => setIsHovered(true)}
+            onHoverEnd={() => setIsHovered(false)}
+            onTapStart={() => setIsHovered(true)}
+            onTapCancel={() => setIsHovered(false)}
         >
             <motion.div
                 initial="initial"
-                animate={isHovered ? "hover" : "initial"}
+                animate={isHovered ? 'hover' : 'initial'}
                 className={`container ${name}`}
             >
                 <img src={`assets/pixel/${name}.png`} alt={`${name} logo`} />
-                <motion.div variants={contactBlockVariants} className="cover" onClick={()=>{setIsHovered(false)}}>
+                <motion.div
+                    variants={contactBlockVariants}
+                    className="cover"
+                    onClick={() => {
+                        setIsHovered(false);
+                    }}
+                >
                     <h4 className="name">{name}</h4>
-                    {additional && <h5 className='additional'>{additional}</h5>}
+                    {additional && <h5 className="additional">{additional}</h5>}
                     <a href={link} target="_blank">
                         <h3>{text}</h3>
                     </a>
@@ -61,6 +67,9 @@ const StyledContact = styled(motion.div)`
             align-items: center;
             backdrop-filter: blur(6px);
             background-color: #4e5352be;
+            .additional {
+                text-align: center;
+            }
             .name {
                 font-size: 2rem;
             }
@@ -103,33 +112,33 @@ const StyledContact = styled(motion.div)`
     @media (max-width: 800px) {
         width: 33.33333vw;
         height: 33vw;
-        .container{
-            .cover{
-                .additional{
-                    font-size:0.8rem !important;
+        .container {
+            .cover {
+                .additional {
+                    font-size: 0.8rem !important;
                 }
-                .name{
-                    font-size:1.6rem;
+                .name {
+                    font-size: 1.6rem;
                 }
             }
         }
     }
-    @media (max-width: 1450px){
-        .container{
-            .cover{
-                a{
-                    h3{
+    @media (max-width: 1450px) {
+        .container {
+            .cover {
+                a {
+                    h3 {
                         font-size: 1.6rem;
                     }
                 }
             }
         }
     }
-    @media (max-width: 1250px){
-        .container{
-            .cover{
-                a{
-                    h3{
+    @media (max-width: 1250px) {
+        .container {
+            .cover {
+                a {
+                    h3 {
                         font-size: 1.3rem;
                     }
                 }
@@ -137,107 +146,95 @@ const StyledContact = styled(motion.div)`
         }
     }
 
-    @media (max-width: 1150px){
-        .container{
-            .cover{
-                .additional{
-                    font-size:0.6rem;
+    @media (max-width: 1150px) {
+        .container {
+            .cover {
+                .additional {
+                    font-size: 0.6rem;
                 }
-                .name{
-                    font-size:1.6rem;
+                .name {
+                    font-size: 1.6rem;
                 }
             }
         }
     }
 
-
-    @media (max-width: 1000px){
-        .container{
-            .cover{
-                .additional{
+    @media (max-width: 1000px) {
+        .container {
+            .cover {
+                .additional {
                     font-size: 0.4rem;
                 }
-                a{
+                a {
                     padding: 8px;
-                    h3{
+                    h3 {
                         font-size: 1rem;
                     }
                 }
             }
         }
     }
-    
-
-
-
-
-
-
 
     @media (max-width: 620px) {
-        
-        .container{
-            .cover{
-                .additional{
-                    font-size:0.4rem !important;
+        .container {
+            .cover {
+                .additional {
+                    font-size: 0.4rem !important;
                 }
-                .name{
-                    font-size:1.1rem;
+                .name {
+                    font-size: 1.1rem;
                 }
             }
         }
     }
 
     @media (max-width: 450px) {
-        
-        .container{
-            .cover{
-                a{
+        .container {
+            .cover {
+                a {
                     padding: 5px;
                 }
-                .additional{
-                    font-size:0.4rem !important;
+                .additional {
+                    font-size: 0.4rem !important;
                 }
-                .name{
-                    font-size:0.9rem;
+                .name {
+                    font-size: 0.9rem;
                 }
             }
         }
     }
     @media (max-width: 350px) {
-        
-        .container{
-            .cover{
-                a{
+        .container {
+            .cover {
+                a {
                     padding: 1px;
-                    h3{
+                    h3 {
                         font-size: 0.9rem;
                     }
                 }
-                .additional{
-                    font-size:0.4rem !important;
+                .additional {
+                    font-size: 0.4rem !important;
                 }
-                .name{
-                    font-size:0.9rem;
+                .name {
+                    font-size: 0.9rem;
                 }
             }
         }
     }
     @media (max-width: 270px) {
-        
-        .container{
-            .cover{
-                a{
+        .container {
+            .cover {
+                a {
                     padding: 1px;
-                    h3{
+                    h3 {
                         font-size: 0.6rem;
                     }
                 }
-                .additional{
-                    font-size:0.2rem !important;
+                .additional {
+                    font-size: 0.2rem !important;
                 }
-                .name{
-                    font-size:0.7rem;
+                .name {
+                    font-size: 0.7rem;
                 }
             }
         }

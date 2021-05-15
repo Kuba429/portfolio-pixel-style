@@ -24,10 +24,10 @@ const ProjectSlide = ({ project }) => {
                     </div>
                 </div>
                 <div className="links">
-                    <a href="" className="link">
+                    <a href={project.github} target="blank" className="link">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="" className="link">
+                    <a href={project.link} target="blank" className="link">
                         <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
@@ -90,10 +90,10 @@ const StyledProjectSlide = styled.div`
                 }
             }
             .techUsed {
-                    display:flex;
-                        flex-direction: column;
-                        align-items:center;
-                        justify-content:center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
                 ul {
                     width: 100%;
                     li {
@@ -167,7 +167,6 @@ const StyledProjectSlide = styled.div`
             .about {
                 .techUsed {
                     ul {
-                        
                         li {
                             font-size: 1.5rem;
                         }
@@ -298,7 +297,6 @@ const StyledProjectSlide = styled.div`
                     }
                 }
             }
-           
         }
     }
     @media (max-height: 590px) {
@@ -318,7 +316,6 @@ const StyledProjectSlide = styled.div`
                     }
                 }
             }
-           
         }
     }
 `;
