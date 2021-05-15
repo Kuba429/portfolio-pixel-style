@@ -7,6 +7,8 @@ import 'react-glidejs/dist/index.css';
 
 //components
 import ProjectSlide from './ProjectSlide';
+//data
+import { projectData } from '../Data';
 
 const ProjectCarousel = () => {
     const glideRef = useRef(null);
@@ -14,12 +16,13 @@ const ProjectCarousel = () => {
     return (
         <StyledProjectCarousel>
             <Glide ref={glideRef} type="slider" perView={1} startAt={1}>
-                <Fragment>
-                    <ProjectSlide />
-                </Fragment>
-                <Fragment>
-                    <ProjectSlide />
-                </Fragment>
+                {projectData.map((project) => {
+                    return (
+                        <Fragment>
+                            <ProjectSlide project={project} />
+                        </Fragment>
+                    );
+                })}
             </Glide>
         </StyledProjectCarousel>
     );
@@ -29,18 +32,17 @@ const StyledProjectCarousel = styled.div`
     width: 80%;
     height: 80%;
 
-    
     .glide__slide {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
 
-    @media (max-width: 800px){
-        .Glide-leftArrow, .Glide-rightArrow{
-        display: none;
-    }
+    @media (max-width: 800px) {
+        .Glide-leftArrow,
+        .Glide-rightArrow {
+            display: none;
+        }
     }
 `;
 

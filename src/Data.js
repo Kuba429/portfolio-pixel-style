@@ -109,4 +109,12 @@ export const projectData = [
         description:
             'Trello inspired app made with javascript built-in drag and drop API',
     },
+    {
+
+        name: 'test name',
+        title: 'test title',
+        techUsed: ['test', 'elo', 'aa'],
+        description:
+            'test to test if it works',
+    },
 ];

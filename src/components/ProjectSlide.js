@@ -1,26 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ProjectSlide = () => {
+const ProjectSlide = ({ project }) => {
+    console.log(project.title);
     return (
-        <StyledProjectSlide>
-            <h1>Drag and Drop Organizer</h1>
+        <StyledProjectSlide image={`assets/projectSnippets/${project.name}.png`}>
+            <h1>{project.title}</h1>
             <div className="hoverPanel">
-                <h2 className="title">Drag and Drop Organizer</h2>
+                <h2 className="title">{project.title}</h2>
                 <div className="about">
                     <div className="description half">
-                        
-                        <p>
-                            Trello inspired app made with javascript built-in
-                            drag and drop API
-                        </p>
+                        <p>{project.description}</p>
                     </div>
                     <div className="techUsed half">
                         <h2 className="title">Tech used</h2>
                         <ul>
-                            <li>javascript</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
+                            {project.techUsed.map((item) => {
+                                return <li>item</li>;
+                            })}
                         </ul>
                     </div>
                 </div>
@@ -42,8 +39,7 @@ const StyledProjectSlide = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-image: url('assets/projectSnippets/organizer.png');
+    background-image: url(${props=>props.image});
     background-size: cover;
     height: 70vh;
     width: 70vw;
@@ -228,7 +224,7 @@ const StyledProjectSlide = styled.div`
     @media (max-width: 450px) {
         width: 90vw;
 
-        h1{
+        h1 {
             font-size: 1rem;
         }
         .hoverPanel {
@@ -237,15 +233,14 @@ const StyledProjectSlide = styled.div`
             }
 
             .about {
-
-                .description{
-                    p{
+                .description {
+                    p {
                         font-size: 1.2rem;
                     }
                 }
-                .techUsed{
-                    ul{
-                        li{
+                .techUsed {
+                    ul {
+                        li {
                             font-size: 1rem;
                         }
                     }
@@ -259,7 +254,6 @@ const StyledProjectSlide = styled.div`
         }
     }
     @media (max-width: 350px) {
-        
         width: 98vw;
     }
 `;
