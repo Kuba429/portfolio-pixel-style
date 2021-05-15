@@ -35,9 +35,9 @@ export const skillData = [
             'I can deploy projects to netlify and other services such as firebase. Netlify is my favorite serverless deployment tool because of its simplicity and reliability.',
     },
     {
-        name: 'mongodb',
+        name: 'english',
         description:
-            'I know basics of working with databases. I can build simple backend interacting with database. Mongo is my DB of choice because i find it simple and intuitive to work with.',
+            'I can use english not only to read documentation, but also to communicate on daily basis.',
     },
     {
         name: 'linux',
@@ -113,7 +113,7 @@ export const projectData = [
 
         name: 'todolist',
         title: 'ToDo List',
-        techUsed: ['React', 'styled components', 'git'],
+        techUsed: ['React', 'styled components'],
         description:
             'ToDo list made with react. Uses local storage to store items',
     },
@@ -121,24 +121,24 @@ export const projectData = [
 
         name: 'portfolio',
         title: 'Portfolio',
-        techUsed: ['React', 'styled components', 'git', 'Framer motion', 'Other small libraries'],
+        techUsed: ['React', 'styled components', 'Framer motion', 'Other small libraries'],
         description:
             'My pixel-style portfolio. Website you\'re currently on.',
     },
     {
 
         name: 'rickandmorty',
-        title: 'ToDo List',
-        techUsed: ['React', 'styled components', 'git'],
+        title: 'Rick and Morty Characters',
+        techUsed: ['Vue', 'External API'],
         description:
-            'ToDo list made with react. Uses local storage to store items',
+            'Website with info about Rick and Morty characters. I made it to learn a little of vue',
     },
     {
 
         name: 'passwordgenerator',
-        title: 'ToDo List',
-        techUsed: ['React', 'styled components', 'git'],
+        title: 'Password Generator',
+        techUsed: ['Javascript', 'HTML', 'CSS'],
         description:
-            'ToDo list made with react. Uses local storage to store items',
+            'One of my first javascript projects. Client side random password generator.',
     },
 ];
