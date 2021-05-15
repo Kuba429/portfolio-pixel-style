@@ -16,7 +16,7 @@ const ProjectSlide = ({ project }) => {
                         <h2 className="title">Tech used</h2>
                         <ul>
                             {project.techUsed.map((item) => {
-                                return <li>item</li>;
+                                return <li>{item}</li>;
                             })}
                         </ul>
                     </div>
