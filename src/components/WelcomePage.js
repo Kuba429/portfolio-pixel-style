@@ -6,7 +6,6 @@ import styled from "styled-components";
 import Navigation from "./Navigation";
 import ArrowContainer from "./ArrowContainer";
 
-import pixelAnim from "../animation";
 
 const WelcomePage = () => {
     return (

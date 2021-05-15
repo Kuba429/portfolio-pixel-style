@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import { v4 } from 'uuid';
 
 const ProjectSlide = ({ project }) => {
-    console.log(project.title);
     return (
-        <StyledProjectSlide image={`assets/projectSnippets/${project.name}.png`}>
+        <StyledProjectSlide
+            image={`assets/projectSnippets/${project.name}.png`}
+        >
             <h1>{project.title}</h1>
             <div className="hoverPanel">
                 <h2 className="title">{project.title}</h2>
@@ -16,7 +18,7 @@ const ProjectSlide = ({ project }) => {
                         <h2 className="title">Tech used</h2>
                         <ul>
                             {project.techUsed.map((item) => {
-                                return <li>{item}</li>;
+                                return <li key={v4()}>{item}</li>;
                             })}
                         </ul>
                     </div>
@@ -39,7 +41,7 @@ const StyledProjectSlide = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(${props=>props.image});
+    background-image: url(${(props) => props.image});
     background-size: cover;
     height: 70vh;
     width: 70vw;
@@ -151,7 +153,7 @@ const StyledProjectSlide = styled.div`
         height: 65vh;
 
         h1 {
-            font-size: 2.4rem;
+            font-size: 2.4rem !important;
         }
 
         .hoverPanel {
@@ -184,7 +186,7 @@ const StyledProjectSlide = styled.div`
         width: 64vw;
 
         h1 {
-            font-size: 1.4rem;
+            font-size: 1.4rem !important;
         }
 
         .hoverPanel {
@@ -225,7 +227,7 @@ const StyledProjectSlide = styled.div`
         width: 90vw;
 
         h1 {
-            font-size: 1rem;
+            font-size: 1rem !important;
         }
         .hoverPanel {
             h2 {
@@ -255,6 +257,64 @@ const StyledProjectSlide = styled.div`
     }
     @media (max-width: 350px) {
         width: 98vw;
+    }
+
+    @media (max-height: 780px) {
+        height: 78vh;
+        .hoverPanel {
+            .about {
+                .techUsed {
+                    ul {
+                        li {
+                            line-height: 1.7rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-height: 710px) {
+        height: 80vh;
+    }
+    @media (max-height: 670px) {
+        .hoverPanel {
+            .title {
+                font-size: 1.4rem !important;
+            }
+            .about {
+                .half {
+                    .title {
+                        font-size: 1.2rem !important;
+                    }
+                }
+                .description {
+                    P {
+                        font-size: 1rem;
+                    }
+                }
+            }
+           
+        }
+    }
+    @media (max-height: 590px) {
+        .hoverPanel {
+            .title {
+                font-size: 1.2rem !important;
+            }
+            .about {
+                .half {
+                    .title {
+                        font-size: 1.02rem !important;
+                    }
+                }
+                .description {
+                    P {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+           
+        }
     }
 `;
 export default ProjectSlide;

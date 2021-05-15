@@ -9,7 +9,7 @@ const ArrowContainer = ({ sectionUp, sectionDown, fromBottom }) => {
             className="arrowContainer"
             fromBottom={fromBottom}
         >
-            {sectionUp != false && (
+            {sectionUp !== false && (
                 <a href={`#${sectionUp}`}>
                     <motion.img
                         variants={arrowVariants}
@@ -21,7 +21,7 @@ const ArrowContainer = ({ sectionUp, sectionDown, fromBottom }) => {
                     />
                 </a>
             )}
-            {sectionDown != false && (
+            {sectionDown !== false && (
                 <a href={`#${sectionDown}`}>
                     <motion.img
                         variants={arrowVariants}

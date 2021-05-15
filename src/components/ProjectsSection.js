@@ -29,6 +29,18 @@ const StyledProjectsSection = styled.section`
         text-align: center;
     }
 
+
+    @media (max-width: 800px){
+        h1{
+            font-size: 3rem;
+        }
+    }
+    @media (max-width: 500px){
+        h1{
+            font-size: 2rem;
+        }
+    }
+
     
 `;
 

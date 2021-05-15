@@ -105,16 +105,40 @@ export const projectData = [
 
         name: 'organizer',
         title: 'Drag and Drop Organizer',
-        techUsed: ['HTML', 'CSS', 'Javascript'],
+        techUsed: ['HTML', 'CSS', 'Javascript', 'git'],
         description:
             'Trello inspired app made with javascript built-in drag and drop API',
     },
     {
 
-        name: 'test name',
-        title: 'test title',
-        techUsed: ['test', 'elo', 'aa'],
+        name: 'todolist',
+        title: 'ToDo List',
+        techUsed: ['React', 'styled components', 'git'],
         description:
-            'test to test if it works',
+            'ToDo list made with react. Uses local storage to store items',
+    },
+    {
+
+        name: 'portfolio',
+        title: 'Portfolio',
+        techUsed: ['React', 'styled components', 'git', 'Framer motion', 'Other small libraries'],
+        description:
+            'My pixel-style portfolio. Website you\'re currently on.',
+    },
+    {
+
+        name: 'rickandmorty',
+        title: 'ToDo List',
+        techUsed: ['React', 'styled components', 'git'],
+        description:
+            'ToDo list made with react. Uses local storage to store items',
+    },
+    {
+
+        name: 'passwordgenerator',
+        title: 'ToDo List',
+        techUsed: ['React', 'styled components', 'git'],
+        description:
+            'ToDo list made with react. Uses local storage to store items',
     },
 ];

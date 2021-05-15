@@ -1,5 +1,6 @@
 import React, { Fragment, useRef } from 'react';
 import styled from 'styled-components';
+import {v4} from 'uuid'
 
 //glide
 import Glide from 'react-glidejs';
@@ -15,10 +16,10 @@ const ProjectCarousel = () => {
 
     return (
         <StyledProjectCarousel>
-            <Glide ref={glideRef} type="slider" perView={1} startAt={1}>
+            <Glide ref={glideRef} type="slider" perView={1} startAt={0}>
                 {projectData.map((project) => {
                     return (
-                        <Fragment>
+                        <Fragment key={v4()} >
                             <ProjectSlide project={project} />
                         </Fragment>
                     );
